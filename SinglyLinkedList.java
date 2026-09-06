@@ -105,6 +105,10 @@ public class SinglyLinkedList<E> {
     }
 
     public void reverse(){       
+        if (isEmpty()) {
+            return;
+        }
+
         Node<E> previous = null;
         Node<E> current = head;
 
@@ -116,6 +120,6 @@ public class SinglyLinkedList<E> {
         }
 
         tail = head;
-        head = previous;  
+        head = previous; 
     }
 }
