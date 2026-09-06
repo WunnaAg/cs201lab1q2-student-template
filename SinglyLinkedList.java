@@ -67,15 +67,15 @@ public class SinglyLinkedList<E> {
 
     // Write your codes below
     public String toString(){
-        StringBuilder sb = new StringBuilder();
+        String result = "";
         Node<E> current = head;
 
         while (current != null) {
-            sb.append(current.getElement());
+            result += current.getElement();
             current = current.getNext();
         }
 
-        return sb.toString();
+        return result;
     }
 
     public E removeLast(){
@@ -105,11 +105,6 @@ public class SinglyLinkedList<E> {
     }
 
     public void reverse(){
-        if (head == null) {
-            tail = null;
-            return;
-        }
-
         Node<E> previous = null;
         Node<E> current = head;
 
